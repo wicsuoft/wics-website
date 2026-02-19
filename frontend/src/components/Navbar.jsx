@@ -6,11 +6,21 @@ export default function Navbar() {
             <div className="mx-auto bg-dark-blue px-8 py-4 flex w-full max-w-custom items-center justify-between">
                 <h1 className="text-white">WICS</h1>
                 <div className="flex items-center gap-6">
-                    <Link className="text-white"href="/">Home</Link>
-                    <Link className="text-white"href="/about">About</Link>
-                    <Link className="text-white"href="/events">Events</Link>
-                    <Link className="text-white"href="/opportunities">Opportunities</Link>
-                    <Link className="text-white"href="/gallery">Gallery</Link>
+                    <Link className="text-white hover:underline "href="/">
+                        Home
+                    </Link>
+                    <Link className="text-white hover:underline"href="/about">
+                        About
+                    </Link>
+                    <Link className="text-white hover:underline "href="/events">
+                        Events
+                    </Link>
+                    <Link className="text-white hover:underline"href="/opportunities">
+                        Opportunities
+                    </Link>
+                    <Link className="text-white hover:underline "href="/gallery">
+                        Gallery
+                    </Link>
                 </div>
             </div>
         </nav>

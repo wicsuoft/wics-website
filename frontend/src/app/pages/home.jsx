@@ -1,11 +1,10 @@
-import HomeLogo from "../../components/HomeLogo";
+import { HomeLogo, Upcoming }from "../../components/index";
 
 export default function Home() {
     return (
         <div className="home">
             <HomeLogo />
-            <h1>Welcome to the Home Page</h1>
-            <p>homehomehome.</p>
+            <Upcoming />
         </div>
     )
 }
