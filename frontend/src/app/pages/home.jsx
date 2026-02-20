@@ -1,8 +1,10 @@
 import { HomeLogo, Upcoming }from "../../components/index";
 
+//TODO: add bigger gap between logo and upcoming.
+
 export default function Home() {
     return (
-        <div className="home">
+        <div>
             <HomeLogo />
             <Upcoming />
         </div>
