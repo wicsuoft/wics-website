@@ -1,26 +1,36 @@
+import wicslogo from "../../public/wicslogo.png";
 import Link from "next/link"
+import Image from "next/image";
+import { JoinUsButton } from "./index";
 
 export default function Navbar() {
     return (
-        <nav className="w-full px-8 font-sans md:px-20 lg:px-32 xl:px-44">
-            <div className="mx-auto bg-dark-blue px-8 py-4 flex w-full max-w-custom items-center justify-between">
-                <h1 className="text-white">WICS</h1>
-                <div className="flex items-center gap-6">
-                    <Link className="text-white hover:underline "href="/">
-                        Home
-                    </Link>
-                    <Link className="text-white hover:underline"href="/about">
-                        About
-                    </Link>
-                    <Link className="text-white hover:underline "href="/events">
-                        Events
-                    </Link>
-                    <Link className="text-white hover:underline"href="/opportunities">
-                        Opportunities
-                    </Link>
-                    <Link className="text-white hover:underline "href="/gallery">
-                        Gallery
-                    </Link>
+        <nav className="w-full bg-dark-blue font-sans">
+            <div className="flex h-37.25 w-full items-center justify-between px-6 md:px-10">
+                <div className="flex items-center">
+                    <Image src={wicslogo} alt="WICS Logo" className="h-auto px-4 py-2" />
+                </div>
+                <div className="flex items-center gap-8">
+                    <div className="flex items-center gap-12 font-normal text-xl">
+                        <Link className="text-white hover:underline "href="/">
+                            Home
+                        </Link>
+                        <Link className="text-white hover:underline"href="/about">
+                            About
+                        </Link>
+                        <Link className="text-white hover:underline "href="/events">
+                            Events
+                        </Link>
+                        <Link className="text-white hover:underline"href="/opportunities">
+                            Opportunities
+                        </Link>
+                        <Link className="text-white hover:underline "href="/gallery">
+                            Gallery
+                        </Link>
+                    </div>
+                    <div className="ml-9">
+                        <JoinUsButton />
+                    </div>
                 </div>
             </div>
         </nav>
