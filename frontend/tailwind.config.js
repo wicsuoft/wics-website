@@ -9,12 +9,6 @@ module.exports = {
       lg: '976px',
       xl: '1440px',
     },
-    // colors: {
-    //   gray: colors.coolGray,
-    //   blue: colors.lightBlue,
-    //   red: colors.rose,
-    //   pink: colors.fuchsia,
-    // },
     extend: {
       spacing: {
         '128': '32rem',
