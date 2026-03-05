@@ -3,26 +3,11 @@ import wicslogo from "../../public/wicslogo.png";
 import Link from "next/link";
 import Image from "next/image";
 import { JoinUsButton } from "./index";
-import { MdMenu } from "react-icons/md";
-import { useState, useEffect, useRef } from "react";
+import { MdClose, MdMenu } from "react-icons/md";
+import { useState } from "react";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const menuRef = useRef(null);
-
-    useEffect(() => {
-    function handleClickOutside(event) {
-        if (menuRef.current && !menuRef.current.contains(event.target)) {
-            setMenuOpen(false);
-        }
-    }
-    if (menuOpen) {
-        document.addEventListener("mousedown", handleClickOutside);
-    }
-    return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-    };
-}, [menuOpen]);
 
     const links = [
         { href: "/", label: "Home" },
@@ -42,12 +27,12 @@ export default function Navbar() {
                 <Link className="flex items-center" href="/">
                     <Image src={wicslogo} alt="WICS Logo" className="w-33 h-auto px-4 py-2" />
                 </Link>
-                <div className="lg:hidden" ref={menuRef}>
+                <div className="lg:hidden">
                     <button className="hover:cursor-pointer" onClick={toggleDrawer}>
-                        <MdMenu className="text-white text-2xl" />
+                        {menuOpen ? <MdClose className="text-white text-2xl" /> : <MdMenu className="text-white text-2xl" />}
                     </button>
                     {menuOpen && (
-                        <div className="absolute right-0 top-10 z-50 flex w-56 flex-col items-start gap-4 bg-dark-blue px-6 py-3 shadow-2xl">
+                        <div className="absolute top-25 right-0 flex w-full flex-col items-start gap-4 bg-dark-blue px-6 py-3 shadow-[0_12px_10px_-5px_rgba(0,0,0,0.3)]">
                             {links.map((link) => (
                                 <Link
                                     key={link.href}
@@ -58,7 +43,7 @@ export default function Navbar() {
                                     {link.label}
                                 </Link>
                             ))}
-                            <div className="ml-9">
+                            <div>
                                 <JoinUsButton />
                             </div>
                         </div>
