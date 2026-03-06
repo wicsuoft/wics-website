@@ -1,4 +1,4 @@
-import wicslogo from "../../public/wics_footer.png";
+import wicslogo from "../../public/wicslogo2.png";
 import { 
     TbBrandLinktree, 
     TbBrandDiscord,
@@ -6,48 +6,49 @@ import {
     TbBrandInstagram
 } from "react-icons/tb";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="w-full h-106 bg-dark-blue font-sans text-center text-white py-6 flex flex-row items-center justify-left gap-20 px-25">
+        <footer className="w-full h-auto md:h-106 bg-dark-blue font-sans text-center text-white py-6 flex flex-col items-center gap-4 px-8 md:flex-row md:items-center md:justify-left md:gap-10 md:px-10 lg:gap-50 lg:px-25">
             <div className="">
-                <Image src={wicslogo} alt="WiCS Logo" className="mx-auto w-40 h-auto" />
+                <Image src={wicslogo} alt="WiCS Logo" className="mx-auto w-52 h-auto md:w-60" />
             </div>
-            <div className="flex flex-col gap-5">
-                <div className="flex flex-row gap-40 text-2xl font-bold font-noto px-2">
-                    <h1> SOCIALS </h1>
-                    <h1> CONTACT US </h1>
-                </div>
-                <div className="flex flex-row gap-30">
-                    <div className="flex flex-col gap-5 text-xl font-light font-sans ">
-                        <p className="flex flex-row items-center"> 
+            <div className="flex flex-col items-center gap-4 md:flex-row md:items-start md:gap-10 lg:gap-30">
+                <div className="flex flex-col gap-5">
+                    <h1 className="text-2xl font-bold font-noto px-2"> SOCIALS </h1>
+                    <div className="flex flex-col gap-5 text-xl font-light font-sans">
+                        <p className="flex flex-row items-center justify-center md:justify-start"> 
                             <TbBrandDiscord className="inline w-8 h-auto mr-3 text-icons" /> 
-                            <Link href="https://discord.gg/wics" target="_blank" rel="noopener noreferrer">
+                            <a href="https://discord.gg/3eHsDhEJ" target="_blank" rel="noopener noreferrer">
                                 Discord
-                            </Link>
+                            </a>
                         </p>
-                        <p className="flex flex-row items-center"> 
+                        <p className="flex flex-row items-center justify-center md:justify-start"> 
                             <TbBrandInstagram className="inline w-8 h-auto mr-3 text-icons" /> 
-                            <Link href="https://instagram.com/uoftwics/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://instagram.com/uoftwics/" target="_blank" rel="noopener noreferrer">
                                 Instagram
-                            </Link>
+                            </a>
                         </p>
-                        <p className="flex flex-row items-center"> 
+                        <p className="flex flex-row items-center justify-center md:justify-start"> 
                             <TbBrandLinkedin className="inline w-8 h-auto mr-3 text-icons" /> 
-                            <Link href="https://linkedin.com/company/uoftwics" target="_blank" rel="noopener noreferrer">
+                            <a href="https://linkedin.com/company/uoftwics" target="_blank" rel="noopener noreferrer">
                                 LinkedIn
-                            </Link>
+                            </a>
                         </p>
-                        <p className="flex flex-row items-center">
+                        <p className="flex flex-row items-center justify-center md:justify-start">
                             <TbBrandLinktree className="inline w-8 h-auto mr-3 text-icons" /> 
-                            <Link href="https://linktr.ee/wicsuoft" target="_blank" rel="noopener noreferrer">
+                            <a href="https://linktr.ee/wicsuoft" target="_blank" rel="noopener noreferrer">
                                 Linktree
-                            </Link>
+                            </a>
                         </p>
                     </div>
+                </div>
+                <div className="flex flex-col gap-5">
+                    <h1 className="text-2xl font-bold font-noto px-2"> CONTACT US </h1>
                     <div className="flex flex-col text-xl font-light font-sans">
-                        <p> wicsuoft@gmail.com </p>
+                        <a href="mailto:wicsuoft@gmail.com" rel="noopener noreferrer">
+                            wicsuoft@gmail.com
+                        </a>
                     </div>
                 </div>
             </div>
