@@ -23,12 +23,12 @@ export default function Navbar() {
 
     return (
         <nav className="w-full bg-dark-blue font-sans">
-            <div className="flex h-25 w-full items-center justify-between px-6 md:px-10">
+            <div className="flex h-25 w-full items-center justify-between px-3 md:px-5">
                 <Link className="flex items-center" href="/">
-                    <Image src={wicslogo} alt="WICS Logo" className="w-33 h-auto px-4 py-2" />
+                    <Image src={wicslogo} alt="WICS Logo" className="h-auto py-2" style={{ width: "clamp(2rem, calc(3.52rem + 7.39vw), 6.25rem)" }} />
                 </Link>
                 <div className="lg:hidden">
-                    <button className="hover:cursor-pointer" onClick={toggleDrawer}>
+                    <button className="cursor-pointer" onClick={toggleDrawer}>
                         {menuOpen ? <MdClose className="text-white text-2xl" /> : <MdMenu className="text-white text-2xl" />}
                     </button>
                     {menuOpen && (
@@ -50,7 +50,7 @@ export default function Navbar() {
                     )}
                 </div>
                 <div className="hidden items-center gap-8 lg:flex">
-                    <div className="flex items-center gap-10 font-normal text-2xl">
+                    <div className="flex items-center gap-10 font-normal text-xl">
                         {links.map((link) => (
                             <Link key={link.href} className="text-white hover:underline" href={link.href}>
                                 {link.label}
