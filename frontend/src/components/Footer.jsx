@@ -30,7 +30,7 @@ export default function Footer() {
                             </a>
                         </p>
                         <p className="flex flex-row items-center"> 
-                            <TbBrandLinkedin className="inline w-8 h-auto mr-3 text-icons" /> 
+                            <TbBrandLinkedin className="inline w-8 h-auto mr-3 text-icons " /> 
                             <a href="https://linkedin.com/company/uoftwics" target="_blank" rel="noopener noreferrer">
                                 LinkedIn
                             </a>
