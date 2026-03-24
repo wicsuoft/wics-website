@@ -2,8 +2,8 @@ import { MissionCard } from "./index"
 
 export default function Mission() {
     return (
-        <div className="w-full sm:w-auto h-auto flex flex-col items-center gap-12">
-            <div className="flex flex-row items-center gap-35">
+        <div className="w-full h-auto flex flex-col items-center gap-8 sm:gap-10 md:gap-12">
+            <div className="w-full flex flex-col md:flex-row items-center md:items-stretch md:justify-center gap-6 sm:gap-8 md:gap-16">
                 <MissionCard 
                     title='Mission'
                     description='Our goal is to do our part in closing the gender gap by encouraging the participation of female students in computer science through a range of social, outreach, and informational events.'
