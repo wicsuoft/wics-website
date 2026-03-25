@@ -18,7 +18,9 @@
   --container-custom: var(--max-w-custom);
   --font-sans: var(--font-poppins);
   --font-mono: var(--font-poppins);
+  --font-noto: var(--font-noto-sans);
   --color-dark-text: var(--dark-text);
+  --color-icons: var(--foreground);
 }
 
 @media (prefers-color-scheme: dark) {
