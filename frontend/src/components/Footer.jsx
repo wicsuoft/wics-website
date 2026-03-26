@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="w-full h-auto md:h-106 bg-dark-blue font-sans text-center text-white py-6 flex flex-col items-center gap-4 px-8 md:flex-row md:items-center md:justify-center md:gap-10 md:px-10 lg:gap-50 lg:px-25">
+        <footer className="w-full h-auto md:h-106 bg-dark-blue font-sans text-center text-white py-6 flex flex-col items-center gap-4 px-8 md:flex-row md:items-center md:justify-center md:gap-10 md:px-10 lg:gap-5 lg:px-80">
             <div className="mx-auto w-full max-w-80 md:mx-0 md:w-auto md:max-w-none">
                 <Image src={wicslogo} alt="WiCS Logo" className="mx-auto w-52 h-auto md:w-60" />
             </div>
