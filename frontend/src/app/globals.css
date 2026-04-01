@@ -20,7 +20,7 @@
   --font-mono: var(--font-poppins);
   --font-noto: var(--font-noto-sans);
   --color-dark-text: var(--dark-text);
-  --color-icons: var(--foreground);
+  --color-icons: var(--background);
 }
 
 @media (prefers-color-scheme: dark) {
