@@ -5,3 +5,7 @@ export { default as Navbar } from "./Navbar";
 export { default as Mission } from "./Mission";
 export { default as MissionCard } from "./MissionCard";
 export { default as Stats } from "./Stats";
+export { default as Initiatives } from "./Initiatives";
+export { default as InitiativeCard } from "./InitiativeCard";
+export { default as UpcomingEvent } from "./UpcomingEvent";
+export { default as LogoCarousel } from "./LogoCarousel";

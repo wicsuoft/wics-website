@@ -1,4 +1,4 @@
-import { HomeLogo, Upcoming, Mission, Stats } from "../../components/index";
+import { HomeLogo, Upcoming, Mission, Stats, Initiatives, LogoCarousel} from "../../components/index";
 import Image from "next/image";
 
 export default function Home() {
@@ -25,6 +25,8 @@ export default function Home() {
                     <Mission />
                 </div>
                 <Stats />
+                <Initiatives />
+                <LogoCarousel />
             </section>
         </div>
     )
