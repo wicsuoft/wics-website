@@ -52,12 +52,12 @@ export default function LogoCarousel() {
           background: linear-gradient(to right, var(--color-lighter-blue) 10%, transparent);
         }
         .fade-right {
-          background: linear-gradient(to right, var(--color-lighter-blue) 10%, transparent);
+          background: linear-gradient(to left, var(--color-lighter-blue) 10%, transparent);
         }
       `}</style>
 
       <div className="w-full bg-lighter-blue flex flex-col py-15 items-center sm:gap-10 md:gap-15">
-        <h3 className="text-dark-text text-2xl sm:text-3xl font-noto font-bold text-center px-2">
+        <h3 className="text-dark-text text-2xl sm:text-3xl font-noto font-bold text-center pb-10 md:pb-5 px-2">
           Supported by
         </h3>
 
