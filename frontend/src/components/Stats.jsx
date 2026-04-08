@@ -1,5 +1,4 @@
 export default function Stats() {
-    // TODO: SHRINK THIS SECTION IT'S HUGE COMPARED TO THE REST RIGHT NOW
   return (
     <div className="bg-linear-to-b to-lighter-blue">
       <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-16 sm:px-15 md:px-20 lg:px-50 xl:px-60 pt-10 sm:pt-14 px-15 md:pt-20 pb-12 sm:pb-20 md:pb-40 ">
