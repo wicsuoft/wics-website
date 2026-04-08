@@ -56,7 +56,7 @@ export default function LogoCarousel() {
         }
       `}</style>
 
-      <div className="w-full bg-lighter-blue flex flex-col py-15 items-center sm:gap-10 md:gap-15">
+      <div className="w-full bg-lighter-blue flex flex-col py-15 items-center sm:gap-7 md:gap-10">
         <h3 className="text-dark-text text-2xl sm:text-3xl font-noto font-bold text-center pb-10 md:pb-5 px-2">
           Supported by
         </h3>
