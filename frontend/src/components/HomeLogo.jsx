@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function HomeLogo() {
     return (
-        <div className="items-center flex flex-col gap-5 pt-10 sm:gap-6 md:gap-8 px-2 sm:px-0">
+        <div className="items-center flex flex-col pt-10 gap-5 sm:gap-6 md:gap-8 px-2 sm:px-0">
             <Image src={wicslogo2} alt="WICS Logo" className="w-50 sm:w-56 md:w-70 h-auto" priority />
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-dark-text text-center leading-tight">
                 University of Toronto <br/> Women in Computer Science

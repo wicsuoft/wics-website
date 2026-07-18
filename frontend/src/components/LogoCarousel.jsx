@@ -10,9 +10,9 @@ const LOGOS = [
   { name: "logo5", url: "/sponsor/logo5.png" },
 ];
 
-function LogoTrack({ logos, paused }) {
+function LogoTrack({ logos }) {
   return (
-    <div className={`flex items-center shrink-0 logo-scroll ${paused ? "logo-paused" : ""}`}>
+    <div className="flex items-center shrink-0">
       {logos.map((logo, i) => (
         <div
           key={`${logo.name}-${i}`}
@@ -33,17 +33,18 @@ function LogoTrack({ logos, paused }) {
 
 export default function LogoCarousel() {
   const [paused, setPaused] = useState(false);
-  const tripled = [...LOGOS, ...LOGOS, ...LOGOS];
 
   return (
     <>
       <style>{`
         @keyframes scroll-left {
           from { transform: translateX(0); }
-          to   { transform: translateX(calc(-100% / 3)); }
+          to   { transform: translateX(-50%); }
         }
         .logo-scroll {
           animation: scroll-left 10s linear infinite;
+          will-change: transform;
+          transform: translate3d(0, 0, 0);
         }
         .logo-paused {
           animation-play-state: paused;
@@ -69,8 +70,9 @@ export default function LogoCarousel() {
           <div className="absolute left-0 top-0 bottom-0 w-28 z-10 pointer-events-none fade-left" />
           <div className="absolute right-0 top-0 bottom-0 w-28 z-10 pointer-events-none fade-right" />
 
-          <div className="flex items-center w-max">
-            <LogoTrack logos={tripled} paused={paused} />
+          <div className={`flex items-center w-max logo-scroll ${paused ? "logo-paused" : ""}`}>
+            <LogoTrack logos={LOGOS} />
+            <LogoTrack logos={LOGOS} />
           </div>
         </div>
       </div>
