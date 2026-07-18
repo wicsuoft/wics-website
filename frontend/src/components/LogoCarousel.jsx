@@ -43,7 +43,7 @@ export default function LogoCarousel() {
           to   { transform: translateX(calc(-100% / 3)); }
         }
         .logo-scroll {
-          animation: scroll-left 30s linear infinite;
+          animation: scroll-left 10s linear infinite;
         }
         .logo-paused {
           animation-play-state: paused;
