@@ -1,7 +1,7 @@
 export default function Stats() {
   return (
     <div className="bg-linear-to-b to-lighter-blue">
-      <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-16 sm:px-15 md:px-20 lg:px-50 xl:px-60 pt-10 sm:pt-14 px-15 md:pt-20 pb-12 sm:pb-20 md:pb-40">
+      <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-16 sm:px-15 md:px-20 lg:px-50 xl:px-60 pt-10 sm:pt-14 px-15 md:pt-20 pb-12 sm:pb-20 md:pb-40 ">
         <div
           className="hidden lg:block bg-gray-200 w-100 h-70 shrink-0"
         />
@@ -19,7 +19,7 @@ export default function Stats() {
         </div>
       </div>
  
-      <div className="flex flex-col sm:flex-col md:flex-row justify-around items-center md:items-start gap-6 sm:gap-8 md:gap-0 px-6 sm:px-10 md:px-16 pb-10 sm:pb-12 md:pb-14">
+      <div className="flex flex-col sm:flex-col md:flex-row justify-around items-center md:items-start gap-6 sm:gap-8 md:gap-0 px-6 sm:px-10 md:px-6 pb-20 sm:pb-20 md:pb-30">
         <div className="flex flex-col items-center gap-1">
           <span className="text-3xl sm:text-4xl md:text-5xl font-poppins font-black text-dark-text" >20+</span>
           <span className="text-xl sm:text-2xl md:text-3xl tracking-wide font-poppins text-dark-text" >members</span>

@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export default function HomeLogo() {
     return (
-        <div className="items-center flex flex-col gap-8">
-            <Image src={wicslogo2} alt="WICS Logo" className="w-50 md:w-60 h-auto" />
-            <h1 className="text-5xl font-bold text-dark-text text-center">
+        <div className="items-center flex flex-col gap-5 pt-10 sm:gap-6 md:gap-8 px-2 sm:px-0">
+            <Image src={wicslogo2} alt="WICS Logo" className="w-50 sm:w-56 md:w-70 h-auto" priority />
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-dark-text text-center leading-tight">
                 University of Toronto <br/> Women in Computer Science
             </h1>
-            <p className="text-center font-light text-xl text-dark-text py-5 w-3xl"> Fostering academic and professional support for women and gender‑diverse students in computer science at the University of Toronto. </p>
+            <p className="text-center font-light text-base sm:text-lg md:text-xl text-dark-text py-2 sm:py-3 md:py-5 w-full max-w-3xl px-2 sm:px-0"> Fostering academic and professional support for women and gender-diverse students in computer science at the University of Toronto. </p>
         </div>
     )
 }

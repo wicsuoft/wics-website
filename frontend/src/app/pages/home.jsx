@@ -1,12 +1,33 @@
-import { HomeLogo, Upcoming }from "../../components/index";
-
-//TODO: add bigger gap between logo and upcoming.
+import { HomeLogo, Upcoming, Mission, Stats, Initiatives, LogoCarousel} from "../../components/index";
+import Image from "next/image";
 
 export default function Home() {
     return (
-        <div>
-            <HomeLogo />
-            <Upcoming />
+        <div className="w-full h-auto">
+            <section className="w-full bg-linear-to-b from-background to-lighter-blue">
+                <div className="mx-auto flex w-full max-w-350 flex-col items-center gap-12 px-4 py-8 pb-16 sm:px-6 sm:py-10 sm:pb-20 md:gap-20 md:px-10 md:pb-28">
+                    <HomeLogo />
+                    <Upcoming />
+                </div>
+            </section>
+
+            <section className="w-full bg-white">
+                <Image
+                    src="/bg-curve.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width={1920}
+                    height={334}
+                    className="block h-auto w-full"
+                />
+
+                <div className="mx-auto flex w-full max-w-350 flex-col items-center px-4 py-10 sm:px-6 sm:py-14 md:px-10 md:py-20">
+                    <Mission />
+                </div>
+                <Stats />
+                <Initiatives />
+                <LogoCarousel />
+            </section>
         </div>
     )
 }
