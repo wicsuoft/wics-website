@@ -1,4 +1,4 @@
-import { HomeLogo, Upcoming, Mission, Stats, Initiatives, LogoCarousel} from "../../components/index";
+import { HomeLogo, Upcoming, Mission, Stats, Initiatives, LogoCarousel} from "./index";
 import Image from "next/image";
 
 export default function Home() {
