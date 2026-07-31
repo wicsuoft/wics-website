@@ -18,8 +18,9 @@ const tempData = [
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen bg-lighter-blue px-4 sm:px-6 lg:px-10 py-16 sm:py-20">
-            <section className="mx-auto flex max-w-7xl flex-col items-center gap-6 text-dark-text">
+        <main className="min-h-screen bg-lighter-blue">
+            <section className="bg-linear-to-b from-background to-lighter-blue px-4 py-16 sm:px-6 sm:py-20 lg:px-10">
+                <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 text-dark-text">
                 <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center leading-tight">
                     About WiCS
                 </h1>
@@ -35,6 +36,11 @@ export default function AboutPage() {
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
                     Executives
                 </h3>
+                </div>
+            </section>
+
+            <section className="bg-lighter-blue px-4 sm:px-6 lg:px-10 pb-16 sm:pb-20">
+                <div className="mx-auto flex max-w-7xl flex-col items-center text-dark-text">
 
                 <div className="mt-4 grid w-full max-w-6xl grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 lg:gap-x-10 lg:gap-y-14">
                     {tempData.map((member) => (
@@ -62,6 +68,7 @@ export default function AboutPage() {
                             linkedinUrl={member.linkedinUrl}
                         />
                     ))}
+                </div>
                 </div>
             </section>
             <MeetAlumni />
