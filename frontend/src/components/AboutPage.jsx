@@ -1,18 +1,19 @@
 import MemberCard from './MemberCard'
+import MeetAlumni from './MeetAlumni'
 
 const tempData = [
     { name: 'Chloe Lee', role: 'President', githubUrl: '#', linkedinUrl: '#' },
     { name: 'Yoyo Liu', role: 'Vice President', githubUrl: '#', linkedinUrl: '#' },
     { name: 'Nicole Leung', role: 'Internal', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Alisa Iskakova', role: 'Mentorship', githubUrl: '#', linkedinUrl: '#' },
+    { name: 'Bob Joe', role: 'Mentorship', githubUrl: '#', linkedinUrl: '#' },
     { name: 'CC', role: 'External', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Yoyo Liu', role: 'Events', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Nicole Leung', role: 'Marketing', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Alisa Iskakova', role: 'Mentorship', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Chloe Lee', role: 'Web Development', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Yoyo Liu', role: 'Web Development', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Nicole Leung', role: 'Advisor', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Alisa Iskakova', role: 'Advisor', githubUrl: '#', linkedinUrl: '#' },
+    { name: 'Alice Smith', role: 'Events', githubUrl: '#', linkedinUrl: '#' },
+    { name: 'Annie Wang', role: 'Marketing', githubUrl: '#', linkedinUrl: '#' },
+    { name: 'Ingrid Florea', role: 'Mentorship', githubUrl: '#', linkedinUrl: '#' },
+    { name: 'Elsa Frozen', role: 'Web Development', githubUrl: '#', linkedinUrl: '#' },
+    { name: 'Anna Frozen', role: 'Web Development', githubUrl: '#', linkedinUrl: '#' },
+    { name: 'Ola Nordmann', role: 'Advisor', githubUrl: '#', linkedinUrl: '#' },
+    { name: 'Name Name', role: 'Advisor', githubUrl: '#', linkedinUrl: '#' },
 ]
 
 export default function AboutPage() {
@@ -27,11 +28,11 @@ export default function AboutPage() {
                     WiCS is dedicated to empowering women in tech by providing a supportive community where members can grow both personally and professionally. We focus on fostering connections, sharing knowledge, and creating opportunities for women to excel in the tech industry. Through workshops, mentorship programs, and networking events, we aim to bridge the gender gap and inspire the next generation of female leaders in computer science.
                 </p>
 
-                <h2 className="pt-6 text-3xl sm:text-4xl md:text-5xl font-bold text-center leading-tight">
+                <h2 className="pt-6 text-2xl sm:text-3xl md:text-4xl font-bold text-center leading-tight">
                     Meet the Team 2026-2027
                 </h2>
 
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
                     Executives
                 </h3>
 
@@ -47,7 +48,7 @@ export default function AboutPage() {
                     ))}
                 </div>
 
-                <h3 className="text-2xl pt-20 sm:text-3xl md:text-4xl font-bold text-center">
+                <h3 className="text-xl pt-20 sm:text-2xl md:text-3xl font-bold text-center">
                     Associates
                 </h3>
 
@@ -63,6 +64,7 @@ export default function AboutPage() {
                     ))}
                 </div>
             </section>
+            <MeetAlumni />
         </main>
     )
 }
