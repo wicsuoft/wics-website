@@ -12,7 +12,7 @@ export default function JoinUsButton({ text = "Join Us", size = "md", className=
         <Link
             href= {href}
             className={cn(
-            "inline-flex items-center rounded-full bg-light-blue text-dark-text transition-transform duration-200 ease-out hover:scale-105 hover:bg-dark-blue",
+            "inline-flex items-center justify-center rounded-full bg-light-blue text-center text-dark-text transition-transform duration-200 ease-out hover:scale-105 hover:bg-dark-blue",
             sizeClasses[size],
             className
             )}
