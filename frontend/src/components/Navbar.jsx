@@ -14,7 +14,6 @@ export default function Navbar() {
         { href: "/about", label: "About" },
         { href: "/events", label: "Events" },
         { href: "/opportunities", label: "Opportunities" },
-        { href: "/gallery", label: "Gallery" },
     ];
 
     const toggleDrawer = () => {
@@ -44,7 +43,7 @@ export default function Navbar() {
                                 </Link>
                             ))}
                             <div>
-                                <JoinUsButton />
+                                <JoinUsButton className='hover:bg-light-blue hover:cursor-pointer'/>
                             </div>
                         </div>
                     )}
@@ -58,7 +57,7 @@ export default function Navbar() {
                         ))}
                     </div>
                     <div className="ml-9">
-                        <JoinUsButton />
+                        <JoinUsButton className="hover:bg-light-blue hover:cursor-pointer" />
                     </div>
                 </div>
             </div>
