@@ -19,25 +19,25 @@ export default function Footer() {
                     <div className="flex w-full flex-col items-start gap-5 text-xl font-light font-sans md:w-fit">
                         <p className="flex w-full flex-row items-center"> 
                             <TbBrandDiscord className="inline w-8 h-auto mr-3 text-icons" /> 
-                            <a href="https://discord.gg/3eHsDhEJ" target="_blank" rel="noopener noreferrer">
+                            <a className="hover:underline" href="https://discord.gg/3eHsDhEJ" target="_blank" rel="noopener noreferrer">
                                 Discord
                             </a>
                         </p>
                         <p className="flex w-full flex-row items-center"> 
                             <TbBrandInstagram className="inline w-8 h-auto mr-3 text-icons" /> 
-                            <a href="https://instagram.com/uoftwics/" target="_blank" rel="noopener noreferrer">
+                            <a className="hover:underline" href="https://instagram.com/uoftwics/" target="_blank" rel="noopener noreferrer">
                                 Instagram
                             </a>
                         </p>
                         <p className="flex w-full flex-row items-center"> 
                             <TbBrandLinkedin className="inline w-8 h-auto mr-3 text-icons " /> 
-                            <a href="https://linkedin.com/company/uoftwics" target="_blank" rel="noopener noreferrer">
+                            <a className="hover:underline" href="https://linkedin.com/company/uoftwics" target="_blank" rel="noopener noreferrer">
                                 LinkedIn
                             </a>
                         </p>
                         <p className="flex w-full flex-row items-center">
                             <TbBrandLinktree className="inline w-8 h-auto mr-3 text-icons" /> 
-                            <a href="https://linktr.ee/wicsuoft" target="_blank" rel="noopener noreferrer">
+                            <a className="hover:underline" href="https://linktr.ee/wicsuoft" target="_blank" rel="noopener noreferrer">
                                 Linktree
                             </a>
                         </p>
@@ -46,7 +46,7 @@ export default function Footer() {
                 <div className="flex w-full flex-col gap-5 text-left md:w-auto">
                     <h1 className="text-2xl font-bold font-noto"> CONTACT US </h1>
                     <div className="flex w-full flex-col text-xl font-light font-sans">
-                        <a href="mailto:wicsuoft@gmail.com" rel="noopener noreferrer">
+                        <a className="hover:underline" href="mailto:wicsuoft@gmail.com" rel="noopener noreferrer">
                             wicsuoft@gmail.com
                         </a>
                     </div>

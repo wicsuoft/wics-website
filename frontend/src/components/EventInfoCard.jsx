@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function EventInfoCard({ month, date, year, title, description, type }) {
 	const buttonText = type === "upcoming"
 		? "Register here!"
-		: "Check out our photo gallery!"
+		: "Check out event photos!"
 
 	return (
 		<article className="box-border min-w-0 w-full max-w-5xl overflow-hidden rounded-xl bg-white px-5 py-8 sm:px-8 sm:py-8 lg:px-10 lg:py-11">
@@ -19,7 +19,7 @@ export default function EventInfoCard({ month, date, year, title, description, t
 						{description}
 					</p>
 					<Link
-						href="/register"
+						href={type === "upcoming" ? "/register" : "https://instagram.com/uoftwics/"}
 						className="mt-6 inline-flex w-fit max-w-full items-center justify-center rounded-lg bg-background px-4 py-2.5 text-center font-noto text-sm font-bold leading-snug text-dark-text transition-colors hover:bg-med-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-text sm:mt-8 sm:px-8 sm:py-3 sm:text-base md:text-lg hover:cursor-pointer"
 					>
 						{buttonText}
