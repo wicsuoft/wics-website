@@ -1,10 +1,18 @@
+import Image from 'next/image'
+
 export default function Stats() {
   return (
     <div className="bg-linear-to-b to-lighter-blue">
       <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-16 sm:px-15 md:px-20 lg:px-50 xl:px-60 pt-10 sm:pt-14 px-15 md:pt-20 pb-12 sm:pb-20 md:pb-40 ">
-        <div
-          className="hidden lg:block bg-gray-200 w-100 h-70 shrink-0"
-        />
+        <div className="relative hidden lg:block bg-gray-200 w-100 h-70 shrink-0 overflow-hidden rounded-2xl">
+          <Image
+            src="/misc/AdaLovelace.webp"
+            alt="Portrait of Ada Lovelace"
+            fill
+            sizes="400px"
+            className="object-cover object-top"
+          />
+        </div>
  
         <div className="flex w-full flex-col justify-center flex-1 min-w-0">
           <p

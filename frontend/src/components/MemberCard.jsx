@@ -14,12 +14,12 @@ export default function MemberCard({
                 <Image
                     src={imageUrl}
                     alt={name}
-                    className="mb-3 h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28 md:h-32 md:w-32"
+                    className="mb-3 h-24 w-24 rounded-full border border-dark-blue object-cover sm:h-28 sm:w-28 md:h-32 md:w-32"
                     width={128}
                     height={128}
                 /> 
             ) : (
-            <div className="mb-3 h-24 w-24 rounded-full bg-gray-300 sm:h-28 sm:w-28 md:h-32 md:w-32">
+            <div className="mb-3 h-24 w-24 rounded-full border border-dark-blue bg-gray-300 sm:h-28 sm:w-28 md:h-32 md:w-32">
             </div> 
             )}
 
@@ -28,13 +28,13 @@ export default function MemberCard({
                 <p className="text-sm sm:text-base leading-tight">{role}</p>
             </div>
             <div className="mt-2 flex items-center justify-center gap-2 text-2xl text-dark-text">
-                {githubUrl && (
-                    <a href={githubUrl} aria-label={`${name} GitHub`} className="transition-transform hover:scale-110">
+                {githubUrl && githubUrl !== '#' && (
+                    <a href={githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`${name} GitHub`} className="transition-transform hover:scale-110">
                         <FaGithub />
                     </a>
                 )}
-                {linkedinUrl && (
-                    <a href={linkedinUrl} aria-label={`${name} LinkedIn`} className="transition-transform hover:scale-110">
+                {linkedinUrl && linkedinUrl !== '#' && (
+                    <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label={`${name} LinkedIn`} className="transition-transform hover:scale-110">
                         <FaLinkedinIn />
                     </a>
                 )}

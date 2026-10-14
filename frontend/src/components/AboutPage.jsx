@@ -1,20 +1,6 @@
 import MemberCard from './MemberCard'
 import MeetAlumni from './MeetAlumni'
-
-const tempData = [
-    { name: 'Chloe Lee', role: 'President', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Yoyo Liu', role: 'Vice President', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Nicole Leung', role: 'Internal', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Bob Joe', role: 'Mentorship', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'CC', role: 'External', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Alice Smith', role: 'Events', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Annie Wang', role: 'Marketing', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Ingrid Florea', role: 'Mentorship', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Elsa Frozen', role: 'Web Development', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Anna Frozen', role: 'Web Development', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Ola Nordmann', role: 'Advisor', githubUrl: '#', linkedinUrl: '#' },
-    { name: 'Name Name', role: 'Advisor', githubUrl: '#', linkedinUrl: '#' },
-]
+import { executives, teamYear } from '../data/team'
 
 export default function AboutPage() {
     return (
@@ -30,7 +16,7 @@ export default function AboutPage() {
                 </p>
 
                 <h2 className="pt-6 text-2xl sm:text-3xl md:text-4xl font-bold text-center leading-tight">
-                    Meet the Team 2026-2027
+                    Meet the Team {teamYear}
                 </h2>
 
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
@@ -42,33 +28,19 @@ export default function AboutPage() {
             <section className="bg-lighter-blue px-4 sm:px-6 lg:px-10 pb-16 sm:pb-20">
                 <div className="mx-auto flex max-w-7xl flex-col items-center text-dark-text">
 
-                <div className="mt-4 grid w-full max-w-6xl grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 lg:gap-x-10 lg:gap-y-14">
-                    {tempData.map((member) => (
+                <div className="mt-4 grid w-full max-w-6xl grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:gap-x-16 lg:gap-y-16">
+                    {executives.map((member) => (
                         <MemberCard
                             key={`${member.name}-${member.role}`}
                             name={member.name}
                             role={member.role}
+                            imageUrl={member.imageUrl}
                             githubUrl={member.githubUrl}
                             linkedinUrl={member.linkedinUrl}
                         />
                     ))}
                 </div>
 
-                <h3 className="text-xl pt-20 sm:text-2xl md:text-3xl font-bold text-center">
-                    Associates
-                </h3>
-
-                <div className="mt-4 grid w-full max-w-6xl grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 lg:gap-x-10 lg:gap-y-14">
-                    {tempData.map((member) => (
-                        <MemberCard
-                            key={`${member.name}-${member.role}`}
-                            name={member.name}
-                            role={member.role}
-                            githubUrl={member.githubUrl}
-                            linkedinUrl={member.linkedinUrl}
-                        />
-                    ))}
-                </div>
                 </div>
             </section>
             <MeetAlumni />
