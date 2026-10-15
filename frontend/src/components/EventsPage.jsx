@@ -1,5 +1,4 @@
 import EventInfoCard from "./EventInfoCard";
-import autodesk from "../../public/events/autodesk.png";
 import crochet from "../../public/events/crochet.jpg";
 import mentorship from "../../public/events/mentorship.png";
 import logic from "../../public/events/logic.png";
@@ -8,22 +7,26 @@ const upcomingEvents = [];
 
 const pastEvents = [
     {
-        title: "Autodesk Office Hours",
-        description: "Tour Autodesk’s downtown office and meet recruiters for S27 roles.",
-        imageURL: autodesk,
-    },
-    {
         title: "Stitch, Sip and Squish",
+        month: "March",
+        date: "31",
+        year: "2026",
         description: "Stressball crochet workshop with Hearts & Hooks!",
         imageURL: crochet,
     },
     {
         title: "Mentorship Program",
+        month: "March",
+        date: "27",
+        year: "2026",
         description: "Learn from industry professionals and connect with female faculty.",
         imageURL: mentorship,
     },
     {
         title: "WiCS Logic Night",
+        month: "February",
+        date: "23",
+        year: "2026",
         description: "Join us for puzzles, brain teasers, and snacks!",
         imageURL: logic,
     },

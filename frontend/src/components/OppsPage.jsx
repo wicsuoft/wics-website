@@ -1,4 +1,18 @@
 import EventInfoCard from "./EventInfoCard";
+import autodesk from "../../public/events/autodesk.png";
+
+const upcomingOpportunities = [];
+
+const pastOpportunities = [
+    {
+        month: "September",
+        date: "22",
+        year: "2026",
+        title: "Autodesk Office Tours",
+        description: "Tour Autodesk’s downtown office and meet recruiters for S27 roles.",
+        imageURL: autodesk,
+    },
+];
 
 export default function OppsPage() {
     return (
@@ -13,23 +27,30 @@ export default function OppsPage() {
                 </p>
             </div>
 
-            <div className="mx-auto mt-16 flex max-w-7xl flex-col items-center gap-16 sm:mt-20 sm:gap-20 sm:px-4 md:px-8 lg:px-12">
-                <EventInfoCard
-                    month="March"
-                    date="15"
-                    year="2024"
-                    title="High School Mentorship Program"
-                    description="Join us for our annual Spring Hackathon! Collaborate with fellow students, showcase your coding skills, and win exciting prizes. Open to all skill levels!"
-                    type="upcoming"
-                />
-                <EventInfoCard
-                    month="November"
-                    date="10"
-                    year="2023"
-                    title="General Member Sign Up"
-                    description="Connect with students, alumni, and industry professionals at our fall networking night."
-                    type="upcoming"
-                />
+            <div className="mx-auto mt-16 flex max-w-7xl flex-col gap-16 sm:mt-20 sm:gap-20 sm:px-4 md:px-8 lg:px-12">
+                <section aria-labelledby="upcoming-opportunities-heading" className="mx-auto flex w-full max-w-5xl flex-col gap-5 sm:gap-7">
+                    <h2 id="upcoming-opportunities-heading" className="font-noto text-3xl font-bold sm:text-4xl">
+                        Upcoming
+                    </h2>
+                    {upcomingOpportunities.length > 0 ? (
+                        upcomingOpportunities.map((opportunity) => (
+                            <EventInfoCard key={opportunity.title} {...opportunity} type="upcoming" />
+                        ))
+                    ) : (
+                        <p className="text-base sm:text-xl">
+                            Check back later for new WiCS opportunities!
+                        </p>
+                    )}
+                </section>
+
+                <section aria-labelledby="past-opportunities-heading" className="mx-auto flex w-full max-w-5xl flex-col gap-5 sm:gap-7">
+                    <h2 id="past-opportunities-heading" className="font-noto text-3xl font-bold sm:text-4xl">
+                        Past Opportunities
+                    </h2>
+                    {pastOpportunities.map((opportunity) => (
+                        <EventInfoCard key={opportunity.title} {...opportunity} type="past" />
+                    ))}
+                </section>
             </div>
         </main>
     )
