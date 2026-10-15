@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-export default function MissionCard({ title, description, imageURL = null}) {
+export default function MissionCard({ title, description, imageURL = null, imagePosition = "center 80%"}) {
   return (
     <div
       className="h-auto min-h-120 w-full max-w-sm md:w-110 items-center rounded-3xl bg-linear-to-b from-light-blue to-lighter-blue brightness-100 p-4 sm:p-5 shadow-xl"
     > 
         {imageURL
-                ? <Image className="bg-gray-200 object-fill mx-auto h-40 sm:h-44 md:h-50 rounded-2xl" src={imageURL} alt={title} />
+                ? <Image className="bg-gray-200 object-cover mx-auto w-full h-40 sm:h-44 md:h-50 rounded-2xl" style={{ objectPosition: imagePosition }} src={imageURL} alt={title} />
                 : <div className="bg-gray-200 object-fill mx-auto my-0 h-40 sm:h-44 md:h-50 rounded-2xl" />
             }
       <h2

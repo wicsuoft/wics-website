@@ -1,6 +1,7 @@
 import Link from "next/link"
+import Image from "next/image"
 
-export default function EventInfoCard({ month, date, year, title, description, type }) {
+export default function EventInfoCard({ month, date, year, title, description, type, imageURL }) {
 	const buttonText = type === "upcoming"
 		? "Register here!"
 		: "Check out event photos!"
@@ -9,9 +10,9 @@ export default function EventInfoCard({ month, date, year, title, description, t
 		<article className="box-border min-w-0 w-full max-w-5xl overflow-hidden rounded-xl bg-white px-5 py-8 sm:px-8 sm:py-8 lg:px-10 lg:py-11">
 			<div className="flex min-w-0 flex-col gap-6 sm:gap-10 md:flex-row md:items-center md:justify-between md:gap-12">
 				<div className="flex min-w-0 flex-1 flex-col items-start">
-					<p className="max-w-full wrap-break-word font-noto text-sm font-bold tracking-wide text-med-blue sm:text-base md:text-xl">
+					{month && date && year && <p className="max-w-full wrap-break-word font-noto text-sm font-bold tracking-wide text-med-blue sm:text-base md:text-xl">
 						{month} {date}, {year}
-					</p>
+					</p>}
 					<h2 className="mt-1 max-w-full wrap-break-word font-noto text-xl font-bold leading-tight text-dark-text sm:mt-2 sm:text-3xl md:text-5xl">
 						{title}
 					</h2>
@@ -25,10 +26,14 @@ export default function EventInfoCard({ month, date, year, title, description, t
 						{buttonText}
 					</Link>
 				</div>
-				<div
+				{imageURL ? <Image
+					src={imageURL}
+					alt={title}
+					className="hidden aspect-square w-full max-w-40 shrink-0 self-center rounded-xl object-cover sm:max-w-48 md:block md:max-w-60"
+				/> : <div
 					aria-label={`${title} event image`}
 					className="hidden aspect-square w-full max-w-40 shrink-0 self-center rounded-xl bg-gray-300 sm:max-w-48 md:block md:max-w-60"
-				/>
+				/>}
 			</div>
 		</article>
 	)

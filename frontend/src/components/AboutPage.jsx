@@ -1,5 +1,4 @@
 import MemberCard from './MemberCard'
-import MeetAlumni from './MeetAlumni'
 import { executives, teamYear } from '../data/team'
 
 export default function AboutPage() {
@@ -43,7 +42,6 @@ export default function AboutPage() {
 
                 </div>
             </section>
-            <MeetAlumni />
         </main>
     )
 }

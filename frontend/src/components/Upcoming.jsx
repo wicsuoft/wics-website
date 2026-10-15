@@ -1,7 +1,7 @@
 import UpcomingEvent from "./UpcomingEvent"
 import { JoinUsButton } from "./index"
 import mentorship from "../../public/events/mentorship.png"
-import logic from "../../public/events/logic.png"
+import autodesk from "../../public/events/autodesk.png"
 import crochet from "../../public/events/crochet.jpg"
 
 export default function Upcoming() {
@@ -11,9 +11,9 @@ export default function Upcoming() {
                 Upcoming and Recent
             </h3>
             <div className="w-full px-4 sm:px-6 md:px-8 box-border flex flex-col md:flex-row md:flex-wrap items-center md:justify-center gap-6 sm:gap-8 md:gap-6 lg:gap-8 xl:gap-12 transition-[gap] duration-300 ease-in-out"> 
+                <UpcomingEvent title="Autodesk Office Hours" description="Tour Autodesk’s downtown office and meet recruiters for S27 roles." imageURL={autodesk} />
                 <UpcomingEvent title="Stitch, Sip and Squish" description="Stressball crochet workshop with Hearts & Hooks!" imageURL={crochet} />
                 <UpcomingEvent title="Mentorship Program" description="Learn from industry professionals and connect with female faculty..." imageURL={mentorship} />
-                <UpcomingEvent title="WiCS Logic Night" description="Join us for puzzles, brain teasers, and snacks!" imageURL={logic} />
             </div>
             <JoinUsButton text="See More" size="lg" className="text-white font-bold font-noto bg-background" href="/events" />
         </div>

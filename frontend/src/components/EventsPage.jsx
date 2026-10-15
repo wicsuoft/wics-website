@@ -1,4 +1,33 @@
 import EventInfoCard from "./EventInfoCard";
+import autodesk from "../../public/events/autodesk.png";
+import crochet from "../../public/events/crochet.jpg";
+import mentorship from "../../public/events/mentorship.png";
+import logic from "../../public/events/logic.png";
+
+const upcomingEvents = [];
+
+const pastEvents = [
+    {
+        title: "Autodesk Office Hours",
+        description: "Tour Autodesk’s downtown office and meet recruiters for S27 roles.",
+        imageURL: autodesk,
+    },
+    {
+        title: "Stitch, Sip and Squish",
+        description: "Stressball crochet workshop with Hearts & Hooks!",
+        imageURL: crochet,
+    },
+    {
+        title: "Mentorship Program",
+        description: "Learn from industry professionals and connect with female faculty.",
+        imageURL: mentorship,
+    },
+    {
+        title: "WiCS Logic Night",
+        description: "Join us for puzzles, brain teasers, and snacks!",
+        imageURL: logic,
+    },
+];
 
 export default function EventsPage() {
     return (
@@ -18,28 +47,24 @@ export default function EventsPage() {
                     <h2 id="upcoming-events-heading" className="font-noto text-3xl font-bold sm:text-4xl">
                         Upcoming
                     </h2>
-                    <EventInfoCard
-                        month="March"
-                        date="15"
-                        year="2024"
-                        title="WiCS Spring Hackathon"
-                        description="Join us for our annual Spring Hackathon! Collaborate with fellow students, showcase your coding skills, and win exciting prizes. Open to all skill levels!"
-                        type="upcoming"
-                    />
+                    {upcomingEvents.length > 0 ? (
+                        upcomingEvents.map((event) => (
+                            <EventInfoCard key={event.title} {...event} type="upcoming" />
+                        ))
+                    ) : (
+                        <p className="text-base sm:text-xl">
+                            Check back later for new WiCS events!
+                        </p>
+                    )}
                 </section>
 
                 <section aria-labelledby="past-events-heading" className="mx-auto flex w-full max-w-5xl flex-col gap-5 sm:gap-7">
                     <h2 id="past-events-heading" className="font-noto text-3xl font-bold sm:text-4xl">
                         Past Events
                     </h2>
-                    <EventInfoCard
-                        month="November"
-                        date="10"
-                        year="2023"
-                        title="WiCS Fall Networking Night"
-                        description="Connect with students, alumni, and industry professionals at our fall networking night."
-                        type="past"
-                    />
+                    {pastEvents.map((event) => (
+                        <EventInfoCard key={event.title} {...event} type="past" />
+                    ))}
                 </section>
             </div>
         </main>
