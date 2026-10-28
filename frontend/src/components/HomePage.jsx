@@ -25,8 +25,8 @@ export default function Home() {
                     <Mission />
                 </div>
                 <Stats />
-                <Initiatives />
-                <LogoCarousel />
+                {/* <Initiatives />
+                <LogoCarousel /> */}
             </section>
         </div>
     )
