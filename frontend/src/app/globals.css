@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: only light;
   --dark-blue: #186B6D;
   --med-blue: #25A5A8;
   --lighter-blue: #E5FFFF;
@@ -23,13 +24,6 @@
   --font-noto: var(--font-noto-sans);
   --color-dark-text: var(--dark-text);
   --color-icons: var(--background);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
